@@ -23,7 +23,7 @@ object Sorts extends App {
       quicksort(less)(lt) ::: (pivot :: quicksort(greater)(lt))
   }
 
-  //println("Quicksort (Array): " + quicksort(nums)(_ < _).mkString(", "))
+  //t println("Quicksort (Array): " + quicksort(nums)(_ < _).mkString(", "))
   def quicksort[A](arr: Array[A])(lt: (A, A) => Boolean): Unit = {
     def helper(start: Int, end: Int): Unit = {
       if(end-start>1){
